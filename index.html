@@ -22,9 +22,13 @@
 
         /* Slideshow container */
         .slideshow-container {
+            width: 100%;
             max-width: 1550px;
+            height: 40vw;
+            max-height: 750px;
             position: relative;
             margin: auto;
+            margin-top: 70px;
         }
 
         /* Next & previous buttons */
@@ -68,7 +72,6 @@
         }
 
         .flex1 {
-            flex-wrap: wrap-reverse;
             margin-top: 40px;
             width: 100%;
             height: 40vw;
@@ -104,8 +107,7 @@
         }
 
         .flex4 {
-            flex-wrap: wrap-reverse;
-            margin-top: 40px;
+            margin-top: 20px;
             width: 100%;
             height: 40vw;
             max-height: 750px;
@@ -115,7 +117,6 @@
         }
 
         .flex5 {
-            flex-wrap: wrap-reverse;
             margin-top: 40px;
             width: 100%;
             height: 40vw;
@@ -307,7 +308,7 @@
 
         #i08 {
             /* background-image: url('jumbo rick.png'); */
-            background-color: firebrick;
+            background-color: black;
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -469,7 +470,7 @@
             width: 100%;
             height: 300px;
             background-color: #ddd;
-            margin-top: 80px;
+            margin-top: 40px;
         }
 
         .ft {
@@ -485,52 +486,79 @@
         @media (min-width:1024px) and (max-width:1280px) {
             .slideshow-container {
                 width: 90vw;
+                height: 40vw;
+                max-height: 750px;
+            }
+
+            #i09 {
+                width: 100vw;
+                height: 40vw;
+                max-height: 750px;
             }
 
             #i08 {
                 width: 90vw;
-                max-width: 1500px
+                margin-left: 0px;
+                max-width: 100%;
             }
 
             #i07 {
-                width: 90vw;
-                max-width: 1500px
+                width: 44%;
+                float: left;
+                margin-left: 50px;
             }
 
             #i06 {
-                width: 44.2vw;
-
+                width: 44%;
+                float: right;
+                margin-right: 50px;
             }
 
             #i05 {
-                width: 44.2vw;
-
+                width: 90vw;
+                margin-left: 50px;
+                max-width: 100%;
             }
 
             .flex {
                 margin-top: -50px;
             }
 
+            .flex2 {
+                margin-top: 30px;
+            }
+
             .flex1 {
-                margin-top: 70px;
+                margin-bottom: 120px;
             }
 
             .flex4 {
-                margin-top: 550px
+                flex-wrap: wrap;
+                display: block;
+                height: 85vw;
+                max-height: 1000px;
             }
 
             .flex5 {
-                margin-top: 20px;
+                margin-top: 40px;
             }
 
             .ft_style {
-                margin-top: 40px;
+                margin-top: 30px;
             }
         }
 
-        @media (min-width:641px) and (max-width:1023px) {
+        /* @media (min-width:641px) and (max-width:1023px) {
             .slideshow-container {
                 width: 90vw;
+                height: 40vw;
+                max-height: 750px;
+            }
+
+            #i09 {
+                width: 100vw;
+                height: 40vw;
+                max-height: 750px;
             }
 
             #i08 {
@@ -539,18 +567,22 @@
             }
 
             #i07 {
-                width: 90vw;
-                max-width: 1500px
+                width: 100vw;
+                max-width: 1150px;
+                height: 40vw;
+                max-height: 750px;
+                margin-bottom: -80px;
             }
 
             #i06 {
-                width: 44.2vw;
+                width: 100vw;
+                max-width: 565px;
 
             }
 
             #i05 {
-                width: 44.2vw;
-
+                width: 100vw;
+                max-width: 565px;
             }
 
             .flex {
@@ -559,10 +591,14 @@
 
             .flex1 {
                 margin-top: 70px;
+                margin-bottom: 120px;
             }
 
             .flex4 {
-                margin-top: 47.2vw;
+                flex-wrap: wrap;
+                height: 40vw;
+                max-height: 750px;
+                margin-top: -70px;
             }
 
             .flex5 {
@@ -570,10 +606,10 @@
             }
 
             .ft_style {
-                margin-top: 40px;
+                margin-top: 30px;
             }
-        }
-
+        }  */
+        /* 
         @media (max-width:480px) {
             .fancy span:before {
                 right: 100%;
@@ -597,7 +633,7 @@
             .slideshow-container {
                 width: 90vw;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -635,7 +671,7 @@
         </div>
     </div>
     <!-- SlideShow Container -->
-    <div class="slideshow-container" style="margin-top: 70px;">
+    <div class="slideshow-container">
         <!-- Individual Slides-->
         <div id="i00" class="mySlides fade">
             <div class="flex">
