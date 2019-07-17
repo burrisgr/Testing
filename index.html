@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
+
+        .mySlides {
+            display: none;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1550px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .flex {
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .flex1 {
+            flex-wrap: wrap-reverse;
+            margin-top: 40px;
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        /* Promo Button Flex Box */
+        .flex2 {
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: -25px;
+        }
+
+        /* Promo Button Flex Box */
+        .flex3 {
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: -25px;
+        }
+
+        .flex4 {
+            flex-wrap: wrap-reverse;
+            margin-top: 40px;
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .flex5 {
+            flex-wrap: wrap-reverse;
+            margin-top: 40px;
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .txtbtn {
+            -moz-user-select: "none";
+            -ms-user-select: "none";
+            -webkit-user-select: "none";
+            user-select: "none";
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            width: auto;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+            border: 0.05rem solid #000;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8125rem;
+            padding: 0.75rem;
+            font-weight: bold;
+            border-radius: 1.5625rem;
+            transition: all 0.2s ease-in-out;
+            margin: 10px;
+        }
+
+        .txtbtn:hover {
+            background-color: whitesmoke;
+            color: #000;
+        }
+
+        .txtbtn2 {
+            width: 75%;
+        }
+
+        .txtbtn3 {
+            width: 30%;
+        }
+
+        .txtbtn2:hover {
+            background-color: whitesmoke;
+            color: #000;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            border: 0.05rem solid #000;
+        }
+
+        .active {
+            background-color: #fdb913;
+        }
+
+        .dot:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+        #i00 {
+            background-image: url('max2.png');
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+        }
+
+        #i01 {
+            background-image: url('max1.jpg');
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+        }
+
+        #i02 {
+            background-image: url('max3.jpg');
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+        }
+
+
+        #i03 {
+            background-image: url('max4.jpg');
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+        }
+
+
+        #i04 {
+            background-image: url('max5.jpg');
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+        }
+
+        #i05 {
+            /* background-image: url('rick2.jpg'); */
+            background-color: firebrick;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 40vw;
+            max-width: 600px;
+            height: 40vw;
+            max-height: 750px;
+            margin: 10px;
+            background-position-y: -100px;
+        }
+
+        #i06 {
+            /* background-image: url('rick2.jpg'); */
+            background-color: firebrick;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 40vw;
+            max-width: 600px;
+            height: 40vw;
+            max-height: 750px;
+            margin: 10px;
+            background-position-y: -100px;
+        }
+
+        #i07 {
+            /* background-image: url('rick2.jpg'); */
+            background-color: firebrick;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 40vw;
+            max-width: 600px;
+            height: 40vw;
+            max-height: 750px;
+            margin: 10px;
+            background-position-y: -100px;
+        }
+
+
+        #i08 {
+            /* background-image: url('jumbo rick.png'); */
+            background-color: firebrick;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            max-width: 1550px;
+            height: 40vw;
+            max-height: 750px;
+            margin: 10px;
+            background-position-y: -100px;
+            margin-top: 0px;
+        }
+
+        #i09 {
+            /* background-image: url('jumbo rick.png'); */
+            background-color: firebrick;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 40vw;
+            max-height: 750px;
+            background-position-y: -150px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+
+        .fancy {
+            line-height: 0;
+            text-align: center;
+            margin-top: 75px;
+        }
+
+        .fancy span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .fancy span:before,
+        .fancy span:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid black;
+            top: 0;
+            width: 250px;
+        }
+
+        .fancy span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+
+        .fancy span:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            color: #333;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            /* background-color: #ddd; */
+            border-bottom: 3px solid#333;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            border-bottom: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .icon-search {
+            background-image: url('icon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .search-container {
+            float: right;
+            margin: 10px;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=text] {
+            padding: 5px;
+            font-size: 15px;
+            border-color: #333;
+            border-radius: 35px;
+            outline: none;
+            padding-left: 10px;
+            background-image: url('icon.png');
+            background-position: 98% center;
+            background-size: 10%;
+            background-repeat: no-repeat;
+            transition: all .25s;
+
+        }
+
+        .ft_style {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            margin-top: 80px;
+        }
+
+        .ft {
+            margin-left: 150px;
+            padding-top: 100px;
+        }
+
+        .p_style {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media (min-width:1024px) and (max-width:1280px) {
+            .slideshow-container {
+                width: 90vw;
+            }
+
+            #i08 {
+                width: 90vw;
+                max-width: 1500px
+            }
+
+            #i07 {
+                width: 90vw;
+                max-width: 1500px
+            }
+
+            #i06 {
+                width: 44.2vw;
+
+            }
+
+            #i05 {
+                width: 44.2vw;
+
+            }
+
+            .flex {
+                margin-top: -50px;
+            }
+
+            .flex1 {
+                margin-top: 70px;
+            }
+
+            .flex4 {
+                margin-top: 550px
+            }
+
+            .flex5 {
+                margin-top: 20px;
+            }
+
+            .ft_style {
+                margin-top: 40px;
+            }
+        }
+
+        @media (min-width:641px) and (max-width:1023px) {
+            .slideshow-container {
+                width: 90vw;
+            }
+
+            #i08 {
+                width: 90vw;
+                max-width: 1500px
+            }
+
+            #i07 {
+                width: 90vw;
+                max-width: 1500px
+            }
+
+            #i06 {
+                width: 44.2vw;
+
+            }
+
+            #i05 {
+                width: 44.2vw;
+
+            }
+
+            .flex {
+                margin-top: -50px;
+            }
+
+            .flex1 {
+                margin-top: 70px;
+            }
+
+            .flex4 {
+                margin-top: 47.2vw;
+            }
+
+            .flex5 {
+                margin-top: 20px;
+            }
+
+            .ft_style {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:480px) {
+            .fancy span:before {
+                right: 100%;
+                margin-right: 15px;
+            }
+
+            .fancy span:after {
+                left: 100%;
+                margin-left: 15px;
+            }
+
+            .fancy {
+                font-size: 6vw;
+                width: 100vw;
+            }
+
+            #i09 {
+                width: 100vw;
+            }
+
+            .slideshow-container {
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Discover
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">History</a>
+                <a href="#">Technology</a>
+                <a href="#">Stories</a>
+                <a href="#">Product</a>
+                <a href="#">Community</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Explore..." name="search">
+            </form>
+        </div>
+    </div>
+    <!-- Company Name Title -->
+    <h1 class="subtitle fancy"><span>Explore <font color="coral">Carhartt</font></span></h1>
+    <!-- XL Jumbo Promo Box -->
+    <div class="flex1">
+        <div id=i09>
+            <div class="flex3">
+                <a href="#" class="txtbtn txtbtn3">PROMO</a>
+            </div>
+        </div>
+    </div>
+    <!-- SlideShow Container -->
+    <div class="slideshow-container" style="margin-top: 70px;">
+        <!-- Individual Slides-->
+        <div id="i00" class="mySlides fade">
+            <div class="flex">
+                <div><a href="#" class="txtbtn">History</a></div>
+            </div>
+        </div>
+        <div id="i01" class="mySlides fade">
+            <div class="flex">
+                <div><a href="#" class="txtbtn">Technology</a></div>
+            </div>
+        </div>
+        <div id="i02" class="mySlides fade">
+            <div class="flex">
+                <div><a href="#" class="txtbtn">Stories</a></div>
+            </div>
+        </div>
+        <div id="i03" class="mySlides fade">
+            <div class="flex">
+                <div><a href="#" class="txtbtn">Product</a></div>
+            </div>
+        </div>
+        <div id="i04" class="mySlides fade">
+            <div class="flex">
+                <div><a href="#" class="txtbtn">Community</a></div>
+            </div>
+        </div>
+        <!-- Dots -->
+        <div style="text-align:left; width: 100%; margin: 10px; margin-top: -40px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <!-- Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Multi Promo Boxes -->
+    <div class="flex4">
+        <div id="i05">
+            <div class="flex2">
+                <a href="#" class="txtbtn txtbtn2">PROMO</a>
+            </div>
+        </div>
+        <div id="i06">
+            <div class="flex2">
+                <a href="#" class="txtbtn txtbtn2">PROMO</a>
+            </div>
+        </div>
+        <div id=i07>
+            <div class="flex2">
+                <a href="#" class="txtbtn txtbtn2">PROMO</a>
+            </div>
+        </div>
+    </div>
+    <!-- Jumbo Promo Box -->
+    <div class="flex5">
+        <div id=i08>
+            <div class="flex3">
+                <a href="#" class="txtbtn txtbtn3">PROMO</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Box -->
+    <footer class="ft_style">
+        <div class="ft">
+            <p class="p_style">About Us</p>
+            <p class="p_style">Costumer Service</p>
+            <p class="p_style">Carhartt Global Sites</p>
+        </div>
+    </footer>
+    <!-- JavaScript for the slideshow box -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
